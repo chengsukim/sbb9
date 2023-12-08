@@ -6,10 +6,10 @@
     </tr>
     <tr th:each="article : ${articleList}">
         <td>
-            <a href="@{|/article/detail/$(article.id)|}" th:text="${article.title}"></a>
+            <a th:href="@{|/article/detail/${article.id}|}" th:text="${article.title}"></a>
         </td>
-        <td>
-            <a href="@{|/article/detail/$(article.id)|}" th:text="${article.content}"></a>
+        <td th:text="${article.content}">
+<!--            <a href="@{|/article/detail/$(article.id)|}" ></a>-->
         </td>
     </tr>
 </table>
